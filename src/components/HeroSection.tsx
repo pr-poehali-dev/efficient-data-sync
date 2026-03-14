@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 const HeroSection = () => {
@@ -22,31 +21,31 @@ const HeroSection = () => {
       <header className="relative z-10 px-6 py-4 mx-auto w-full max-w-7xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="text-white text-2xl font-bold tracking-tight">
+            <a href="/" className="text-white text-2xl font-bold tracking-tight">
               <span className="text-blue-400">Cine</span>AI
-            </Link>
+            </a>
             <nav className="hidden ml-12 space-x-8 md:flex">
-              {["Возможности", "Примеры", "Цены", "Партнёрам", "О нас"].map((item, index) => (
-                <Link
+              {["Возможности", "Примеры", "Цены", "Партнёрам", "О нас"].map((item) => (
+                <a
                   key={item}
-                  to={`/${["features", "gallery", "pricing", "partners", "about"][index]}`}
+                  href="#"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
                   {item}
-                </Link>
+                </a>
               ))}
             </nav>
           </div>
           <div className="flex items-center space-x-4">
-            <Link to="/login" className="px-4 py-2 text-white hover:text-gray-200 transition-colors text-sm">
+            <a href="#" className="px-4 py-2 text-white hover:text-gray-200 transition-colors text-sm">
               Войти
-            </Link>
-            <Link
-              to="/demo"
+            </a>
+            <a
+              href="#"
               className="px-5 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-colors text-sm font-medium"
             >
               Запросить демо
-            </Link>
+            </a>
           </div>
         </div>
       </header>
@@ -88,20 +87,20 @@ const HeroSection = () => {
         </div>
 
         <div className="flex flex-col mt-2 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-          <Link
-            to="/demo"
+          <a
+            href="#"
             className="flex items-center justify-center gap-2 px-8 py-3.5 text-base font-semibold text-gray-900 bg-white rounded-lg hover:bg-gray-100 transition-colors"
           >
             Создать мультфильм
             <Icon name="ArrowRight" size={18} />
-          </Link>
-          <Link
-            to="/gallery"
+          </a>
+          <a
+            href="#"
             className="flex items-center justify-center gap-2 px-8 py-3.5 text-base font-medium text-white bg-white/10 border border-white/20 rounded-lg hover:bg-white/15 transition-colors backdrop-blur-sm"
           >
             <Icon name="Play" size={18} />
             Смотреть примеры
-          </Link>
+          </a>
         </div>
 
         {/* Partners Section */}
